@@ -10,7 +10,8 @@ export const getUserImageSource = (imagepath) => {
   if (imagepath) {
     return getSupabaseFileUrl(imagepath);
   } else {
-    return require("../assets/images/defuser.png"); // Ensure the default image path is valid
+    return;
+    //return require("../assets/images/defuser.png"); // Ensure the default image path is valid
   }
 };
 

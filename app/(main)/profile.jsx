@@ -92,24 +92,6 @@ const profile = () => {
     );
   };
 
-  // const handleLogout = async () => {
-  //   //confirmation
-  //   Alert.alert(
-  //     "Confirm",
-  //     "Are you Sure you want to logout?"[
-  //       ({
-  //         text: "Cancel",
-  //         onPress: () => console.log("Cancel Pressed"),
-  //         style: "cancel",
-  //       },
-  //       {
-  //         text: "LogOut",
-  //         onPress: () => onLogout(),
-  //         style: "destructive",
-  //       })
-  //     ]
-  //   );
-  // };
   return (
     <ScreenWrapper bg="white">
       <FlatList

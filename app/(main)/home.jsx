@@ -232,7 +232,10 @@ const Home = () => {
           <Text style={styles.title}>LinkUp!</Text>
           <View style={styles.icons}>
             <Pressable
-              onPress={() => router.push("notifications")}
+              onPress={() => {
+                console.log("Notifications pressed");
+                router.push("/notifications");
+              }}
               style={styles.iconContainer}
             >
               <Icon
@@ -249,7 +252,12 @@ const Home = () => {
                 </View>
               )}
             </Pressable>
-            <Pressable onPress={() => router.push("newpost")}>
+            <Pressable
+              onPress={() => {
+                console.log("New post pressed");
+                router.push("/newpost");
+              }}
+            >
               <Icon
                 name="plus"
                 size={hp(3.2)}
@@ -257,7 +265,12 @@ const Home = () => {
                 color={theme.colors.text}
               />
             </Pressable>
-            <Pressable onPress={() => router.push("profile")}>
+            <Pressable
+              onPress={() => {
+                console.log("Profile pressed");
+                router.push("/profile");
+              }}
+            >
               <Avatar
                 uri={user?.image}
                 size={hp(3.2)}

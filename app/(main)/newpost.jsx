@@ -163,20 +163,6 @@ const newpost = () => {
               }}
             />
 
-            {/* {file && (
-              <View style={styles.file}>
-                {getFileType(file) == "video" ? (
-                  <></>
-                ) : (
-                  <Image
-                    source={{ uri: getFileUri(file) }}
-                    resizeMode="cover"
-                    style={{ flex: 1 }}
-                  />
-                )}
-              </View>
-            )} */}
-
             {file && (
               <View style={styles.file}>
                 {getFileType(file) === "video" ? (
@@ -217,14 +203,15 @@ const newpost = () => {
             </View>
           </View>
         </ScrollView>
-
-        <Button
-          buttonStyle={{ height: hp(6.2) }}
-          title={post && post.id ? "Update" : "Post"}
-          loading={loading}
-          hasShadow={false}
-          onPress={onSubmit}
-        />
+        <View style={{ marginTop: 30, alignItems: "center" }}>
+          <Button
+            buttonStyle={{ height: hp(6.2), width: "50%" }}
+            title={post && post.id ? "Update" : "Post"}
+            loading={loading}
+            hasShadow={false}
+            onPress={onSubmit}
+          />
+        </View>
       </View>
     </ScreenWrapper>
   );
